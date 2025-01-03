@@ -1,0 +1,16 @@
+emojis = {
+    ":)": "😀",
+    ":(": "😔",
+    ";)": "😉"
+}
+
+while True:
+    message = input("Enter your message: ")
+    if message.lower() == "quit":
+        print("Good bye!")
+        break
+    words = message.split(' ')
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    print(output)
